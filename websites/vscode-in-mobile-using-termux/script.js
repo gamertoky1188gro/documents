@@ -58,3 +58,15 @@ function copy4() {
         console.log(`Copied the text: ${textToCopy}`);
     }, 100000); // 10000 milliseconds = 10 seconds
 }
+
+function mail() {
+    window.location.href = "mailto:tokyintelligentgamer@gmail.com";
+    // Replace 'tokyintelligentgamer@gmail.com' with the recipient's email address
+    var recipientEmail = 'tokyintelligentgamer@gmail.com';
+
+    // Construct the Gmail compose URL
+    var gmailComposeUrl = 'https://mail.google.com/mail/u/0/?view=cm&fs=1&to=' + recipientEmail;
+
+    // Open Gmail in a new window/tab
+    window.open(gmailComposeUrl, '_blank');
+}
