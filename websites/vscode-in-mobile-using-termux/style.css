@@ -2,6 +2,42 @@ body {
     background-repeat: repeat;
     background-size: cover;
     background-position: center;
-    background-image: url(bp.jpg);
+    background-color: darkgray;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
+.qaz {
+    border: 1.5px solid cyan;
+    height: 600px;
+    width: 1300px;
+    justify-content: center;
+    background-color: antiquewhite;
+    justify-items: center;
+    align-items: center;
+    filter: blur(20);
+}
+
+.wsx {
+    border: 1px solid snow;
+    border-radius: 10px;
+    background-color: blueviolet;
+    height: 100x;
+    width: 160px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.rfv, .tgb {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Bungee Spice', sans-serif;
+    color: aquamarine;
+}
+
+.yhn {
+    
+}
