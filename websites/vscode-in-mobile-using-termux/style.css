@@ -39,5 +39,10 @@ body {
 }
 
 .yhn {
-    
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Rubik Doodle Shadow';
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
 }
