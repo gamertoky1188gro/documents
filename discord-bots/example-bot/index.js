@@ -56,13 +56,15 @@ client.on('interactionCreate', (interaction) => {
         const embed = new EmbedBuilder()
         .setColor('Random')
 	    .setTitle('gamertoky1188 youtube channel')
-	    .setURL('https://www.youtube.com/@toky1234/')
-	    .setAuthor({ name: 'gammrtoky1188', iconURL: ''})
-        .setDescription('please subscribe my channel')
-	    .setThumbnail('htts')
+	    .setURL('https://www.youtube.com/@toky1234')
+	    .setAuthor({ name: 'GAMERTOKY1188', iconURL: 'https://gamertoky1188gro.github.io/documents/discord-bots/example-bot/connect.png', url: 'https://www.youtube.com/@toky1234' })
+	    .setDescription('pls subscribe my channel.')
+	    .setThumbnail('https://gamertoky1188gro.github.io/documents/discord-bots/example-bot/connect.png')
 	    .setTimestamp()
-	    .setFooter({ text: 'from YouTube', iconURL: '' });
-        }
+	    .setFooter({ text: 'from youtube', iconURL: 'https://gamertoky1188gro.github.io/documents/discord-bots/example-bot/Screenshot_20231227-181633.png' });
+        
+        interaction.reply({ embeds: [embed] });
+    }
 });
 
 client.login(process.env.TOKEN)

@@ -18,33 +18,13 @@ const commands = [
                 name: 'first-number',
                 description: 'enter first number',
                 type: ApplicationCommandOptionType.Number,
-                required: true,
-                choices: [
-                    {
-                        name: '600',
-                        value: 600
-                    },
-                    {
-                        name: '1200',
-                        value: 1200
-                    }
-                ]
+                required: true
             },
             {
                 name: 'second-number',
                 description: 'enter second number',
                 type: ApplicationCommandOptionType.Number,
-                required: true,
-                choices: [
-                    {
-                        name: '600',
-                        value: 600
-                    },
-                    {
-                        name: '400',
-                        value: 400
-                    }
-                ]
+                required: true
             }
         ]
     },
