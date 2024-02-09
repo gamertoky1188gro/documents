@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Client, IntentsBitField, EmbedBuilder } = require('discord.js');
+const { Client, IntentsBitField, EmbedBuilder, ActivityType } = require('discord.js');
 const dt = Date();
 
 const client = new Client ({
@@ -13,6 +13,11 @@ const client = new Client ({
 
 client.on('ready', (c) => {
     console.log(`the bot is ready🙂🙂🙂${c.user.tag}`);
+    client.user.setActivity({
+        name: 'checking-discord-server',
+        type: ActivityType.Competing,
+        status: 'idle'
+    })
 });
 
 client.on('messageCreate', (message) => {
@@ -62,8 +67,38 @@ client.on('interactionCreate', (interaction) => {
 	    .setThumbnail('https://gamertoky1188gro.github.io/documents/discord-bots/example-bot/connect.png')
 	    .setTimestamp()
 	    .setFooter({ text: 'from youtube', iconURL: 'https://gamertoky1188gro.github.io/documents/discord-bots/example-bot/Screenshot_20231227-181633.png' });
-        
+
         interaction.reply({ embeds: [embed] });
+    };
+
+});
+
+client.on('interactionCreate', async (interaction) => {
+    try {
+        if (!interaction.isButton()) return;
+        await interaction.deferReply({ ephemeral: true });
+
+        const role =  interaction.guild.roles.cache.get(interaction.customId);
+            
+        if (!role) {
+            interaction.editReply({
+                content: 'i could not find the roll',
+            })
+            return;
+        }
+    
+        const hasRole = interaction.member.roles.cache.has(role.id)
+
+        if (hasRole) {
+            await interaction.member.roles.remove(role);
+            await interaction.editReply(`the role ${role} was removed`);
+            return;
+        }
+    
+        await interaction.member.roles.add(role);
+        await interaction.editReply(`the role ${role} was removed`); 
+    } catch (error) {
+        console.log(error);
     }
 });
 

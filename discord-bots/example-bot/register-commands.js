@@ -31,6 +31,10 @@ const commands = [
     {
         name: 'gamertoky1188-yt-channel',
         description: 'show gamertoky1188 youtube channel'
+    },
+    {
+        name: 'owner',
+        description: 'show owner role'
     }
 ]
 

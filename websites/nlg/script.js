@@ -1,0 +1,1 @@
+export const mmeeoooww = document.getElementById('mmeeooww');
