@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meow</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
+    
 </head>
 <body>
+    <div id="woem" class="woem" style="left: 650px; position: relative; resize: both; border: px solid grey; overflow: auto;"></div>
     <button id="meow" onclick="meow()" class="meow" >click me nlg 🙂🙂🙂</button>
     <div id="mmeeooww"></div>
+    <script>
+        document.getElementById('woem').innerHTML = `<h1 style="color: red; font-size: 20px;">${Date()}</h1>`;
+    </script>
 </body>
 </html>
