@@ -73,33 +73,5 @@ client.on('interactionCreate', (interaction) => {
 
 });
 
-client.on('interactionCreate', async (interaction) => {
-    try {
-        if (!interaction.isButton()) return;
-        await interaction.deferReply({ ephemeral: true });
-
-        const role =  interaction.guild.roles.cache.get(interaction.customId);
-            
-        if (!role) {
-            interaction.editReply({
-                content: 'i could not find the roll',
-            })
-            return;
-        }
-    
-        const hasRole = interaction.member.roles.cache.has(role.id)
-
-        if (hasRole) {
-            await interaction.member.roles.remove(role);
-            await interaction.editReply(`the role ${role} was removed`);
-            return;
-        }
-    
-        await interaction.member.roles.add(role);
-        await interaction.editReply(`the role ${role} was removed`); 
-    } catch (error) {
-        console.log(error);
-    }
-});
 
 client.login(process.env.TOKEN)
