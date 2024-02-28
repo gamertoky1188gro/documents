@@ -1,0 +1,13 @@
+{
+  "name": "example-bot",
+  "version": "1.0.0",
+  "description": "gamertoky1188 first bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node register-commands",
+    "start": "node --watch index"
+  },
+  "author": "toky",
+  "license": "ISC",
+  "keywords": []
+}
