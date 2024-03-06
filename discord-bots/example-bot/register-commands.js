@@ -1,56 +1,40 @@
 require('dotenv').config()
 const { REST, Routes, ApplicationCommandOptionType } = require('discord.js');
+const { commands } = require('./commands');
 
-const commands = [
+const command1 = [
     {
-        name: 'meow',
-        description: 'reply with emoji'
-    },
-    {
-        name: 'date',
-        description: 'show date and time'
-    },
-    {
-        name: 'calculate',
-        description: 'plus calculate two number',
-        options: [
+        "name": "calculate",
+        "description": "plus calculate two number",
+        "options": [
             {
-                name: 'first-number',
-                description: 'enter first number',
-                type: ApplicationCommandOptionType.Number,
-                required: true
+                "name": "first-number",
+                "description": "enter first number",
+                "type": ApplicationCommandOptionType.Number,
+                "required": true
             },
             {
-                name: 'second-number',
-                description: 'enter second number',
-                type: ApplicationCommandOptionType.Number,
-                required: true
+                "name": "second-number",
+                "description": "enter second number",
+                "type": ApplicationCommandOptionType.Number,
+                "required": true
             }
         ]
     },
-    {
-        name: 'gamertoky1188-yt-channel',
-        description: 'show gamertoky1188 youtube channel'
-    }
 ]
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
 (async () => {
     try {
-        console.log('regestaring slash command...............')
+        console.log('regestaring slash command...............');
+        const allCommands = [...commands, ...command1]
         await rest.put(
             Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
-            { body: commands }
+            { body: allCommands }
         )
         console.log('slash command registared')
     } catch (error) {
         console.log(`⚠️there was an error⚠️:⚠️${error}⚠️`);
     }
 })();
-
-
-
-
-
-module.exports = { commands };

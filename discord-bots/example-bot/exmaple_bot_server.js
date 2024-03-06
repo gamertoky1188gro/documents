@@ -1,6 +1,26 @@
-const express = require('express');
-const ebts = express();
+const http = require('http');
+const fs = require('fs')
+const ports = [
+    {
+        port: 2024
+    }
+];
 
-ebts.get('/', () => {});
+const serv = http.createServer((req, res) => {
+    fs.readFile('index.html', (err, data) => {
+        if (err) {
+            res.end('')
+        } else {
+            res.write(data);
+            res.end(data)
+        }
+    })
+})
 
-ebts.listen(2024)
+serv.listen(ports[0].port, () => {
+    if (ports[0].port === 2024) {
+        console.log(`the server runs on port ${ports[0].port}`);
+    } else {
+        console.log('the server is running on another port. I suggest telling this to Jahin.');
+    }
+})

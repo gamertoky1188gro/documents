@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 609px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(cyan, rgb(0, 208, 255), rgb(0, 255, 17));
+}
+
+.nav2 {
+    height: 9.3%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 42%;
+    width: 100%;
+    background-color: snow;
+}
+
+.material-symbols-outlined {
+    margin-top: 16px;
+    background-color: transparent;
+    color: cyan;
+}
+
+.btn1 {
+    background-color: transparent;
+    border: solid transparent;
+    display: flex;
+    justify-content: center;
+    justify-items: center; /* This property isn't valid. Use align-items if needed. */
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.btn1:hover {
+    background-color: black;
+}
+
+.material-symbols-outlined:hover {
+    color: white;
+}
+
+.nav2:hover {
+    background-color: chocolate;
+}
+
+.nav1 {
+    background-color: snow;
+    height: 9%;
+    width: 100%;
+    border-radius: 90px;
+    margin-top: 6%;
+    display: none;
+}
+
+.botImg {
+    left: 0%;
+    margin-left: 40%;
+    position: relative;
+    top: 9%;
+    margin-top: -10%;
+    align-items: center;
+    background: transparent;
+    border: transparent;
+}
+
+.div1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: transparent;
+    margin-left: 25%;
+    margin-top: 10%;
+    display: none;
+}
+
+.window {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    resize: both;
+}
+
+.title-bar {
+    position: relative;
+    height: 40px;
+    background-color: #0078D4;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.window-controls button {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 5px;
+    position: relative;
+}
+
+.window-controls button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    padding: 20px;
+}

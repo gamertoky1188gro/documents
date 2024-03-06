@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>exmple-bot</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    
+    <nav class="nav1" id="nav1">
+        <button onclick="btn2()" class="btn1">
+            <span class="material-symbols-outlined" style="color: red;">
+                close
+            </span>
+        </button>
+        <button onclick="btn3()" class="btn1" style="margin-left: 90%;">
+            <span class="material-symbols-outlined">
+                tab_close
+            </span>
+        </button>
+    </nav>
+
+    <div class="div1" id="window">
+        <div class="window">
+            <div class="title-bar">
+                <div class="window-controls">
+                    <div class="yo">
+                        <button class="close" onclick="closeWindow()">
+                            <span class="material-symbols-outlined">
+                                close
+                            </span>
+                        </button>
+                        <button class="fullscreen" onclick="fullscreen()">
+                            <span class="material-symbols-outlined">
+                                fullscreen
+                            </span>
+                        </button>
+                        <button class="minimize" onclick="closeWindow()">
+                            <span class="material-symbols-outlined">
+                                minimize
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <iframe src="botsData.html" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav2" id="nav2">
+        <button class="btn1" onclick="btn1w()"><span class="material-symbols-outlined">
+            window
+        </span></button>
+
+        <button class="botImg" id="btn4" onclick="btn4()"><img src="Chatbot Message Bubble.jpg" class="botImg"  height="56" width="56"></button>
+    </nav>
 </body>
 </html>

@@ -1,0 +1,14 @@
+[
+    {
+        "name": "meow",
+        "description": "reply with emoji"
+    },
+    {
+        "name": "date",
+        "description": "show date and time"
+    },
+    {
+        "name": "gamertoky1188-yt-channel",
+        "description": "show gamertoky1188 youtube channel"
+    }
+]
